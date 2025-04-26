@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon and stylesheet links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" alt="Favicon">
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <title>Intro component with sign up form</title>
+</head>
+
+<body>
+  <!-- Right section: Introduction text -->
+  <div class="right-section">
+    <p class="learn-para">
+      Learn to code by watching others
+    </p>
+    <p class="exp-para">
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. 
+    </p>
+  </div>
+
+  <!-- Left section: Sign-up form -->
+  <div class="left-section">
+    <p class="free-trial">
+      <b>Try it free 7 days</b> then $20/mo. thereafter
+    </p>
+    
+    <div class="lower-section">
+      <!-- First Name Input -->
+      <div class="input-div">
+        <input type="text" class="input-data js-first-name" placeholder="First Name">
+        <img src="images/icon-error.svg" class="warn-icon js-icon-first-name" alt="Error icon for first name">
+        <p class="warn-para js-para-first-name">
+          First Name cannot be empty
+        </p>
+      </div>
+
+      <!-- Last Name Input -->
+      <div class="input-div">
+        <input type="text" class="input-data js-last-name" placeholder="Last Name">
+        <img src="images/icon-error.svg" class="warn-icon js-icon-last-name" alt="Error icon for last name">
+        <p class="warn-para js-para-last-name">
+          Last Name cannot be empty
+        </p>
+      </div>
+
+      <!-- Email Input -->
+      <div class="input-div">
+        <input type="text" class="input-data js-email-address" placeholder="Email Address">
+        <img src="images/icon-error.svg" class="warn-icon js-icon-email-address" alt="Error icon for email">
+        <p class="warn-para js-para-email-address">
+          Looks like this is not an email
+        </p>
+      </div>
+
+      <!-- Password Input -->
+      <div class="input-div">
+        <input type="text" class="input-data js-password" placeholder="Password">
+        <img src="images/icon-error.svg" class="warn-icon js-icon-password" alt="Error icon for password">
+        <p class="warn-para js-para-password">
+          Password cannot be empty
+        </p>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="click-but js-click-but">
+        Claim your free trial
+      </button> 
+      
+      <!-- Terms and Services -->
+      <p class="agreement">
+        By clicking the button, you are agreeing to our <span>Terms and Services</span>  
+      </p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="index.js"></script>
+</body>
+</html>

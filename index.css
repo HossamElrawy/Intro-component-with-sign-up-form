@@ -1,0 +1,216 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Right section (intro text) */
+.right-section {
+    padding-left: 10.3125rem; /* 165px → 165/16 = 10.3125rem */
+    padding-right: 3.875rem; /* 62px → 62/16 = 3.875rem */
+    color: white;
+}
+
+.learn-para {
+    font-weight: 700;
+    font-size: 3.0625rem; /* 49px → 49/16 = 3.0625rem */
+    margin-bottom: 1.875rem; /* 30px → 30/16 = 1.875rem */
+}
+
+.exp-para {
+    font-size: 0.9375rem; /* 15px → 15/16 = 0.9375rem */
+}
+
+/* Left section (form) */
+.left-section {
+    padding: 0 10.3125rem 0 0.9375rem; /* 165px → 10.3125rem, 15px → 0.9375rem */
+}
+
+.free-trial {
+    background-color: hsl(248, 32%, 49%);
+    padding: 1.25rem 0; /* 20px → 1.25rem */
+    border-radius: 0.75rem; /* 12px → 0.75rem */
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1.5rem; /* 24px → 1.5rem */
+    box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.1); /* 8px → 0.5rem */
+}
+
+.lower-section {
+    background-color: white;
+    padding: 2.5rem; /* 40px → 2.5rem */
+    border-radius: 0.75rem; /* 12px → 0.75rem */
+    box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.1); /* 8px → 0.5rem */
+}
+
+/* Input fields */
+.input-div {
+    margin-bottom: 1.25rem; /* 20px → 1.25rem */
+    position: relative;
+}
+
+.input-data {
+    display: block;
+    width: 100%;
+    padding: 1rem; /* 16px → 1rem */
+    font-family: "Poppins", sans-serif;
+    border-radius: 0.5rem; /* 8px → 0.5rem */
+    font-weight: 600;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.input-data:focus {
+    outline: none;
+    border: 1px solid hsl(248, 32%, 49%);
+}
+
+/* Warning messages */
+.warn-para {
+    color: hsl(0, 100%, 74%);
+    text-align: end;
+    font-size: 0.625rem; /* 10px → 0.625rem */
+    margin-top: 0.625rem; /* 10px → 0.625rem */
+    font-style: italic;
+    font-weight: 500;
+    display: none;
+}
+
+/* Button styles */
+.click-but {
+    width: 100%;
+    border: none;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    padding: 1.5rem 0 1.25rem 0; /* 24px → 1.5rem, 20px → 1.25rem */
+    border-radius: 0.5rem; /* 8px → 0.5rem */
+    font-weight: 500;
+    margin-bottom: 1.125rem; /* 18px → 1.125rem */
+    font-size: 1.0625rem; /* 17px → 1.0625rem */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.click-but:hover {
+    opacity: 0.5;
+}
+
+/* Terms agreement text */
+.agreement {
+    text-align: center;
+    font-size: 0.625rem; /* 10px → 0.625rem */
+    color: hsl(246, 25%, 77%);
+}
+
+span {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+/* Error icon */
+.warn-icon {
+    display: none;
+    position: absolute;
+    right: 1.5rem; /* 24px → 1.5rem */
+    top: 0.9375rem; /* 15px → 0.9375rem */
+}
+
+/* Utility classes for showing warnings */
+.warn-icon.not-hidden {
+    display: block;
+}
+
+.warn-para.not-hidden {
+    display: block;
+}
+
+.input-data-warn {
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+.input-data-warn::placeholder {
+    color: hsl(0, 100%, 74%);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 50rem) { /* 800px → 800/16 = 50rem */
+    body {
+        background: url(images/bg-intro-mobile.png);
+        background-color: hsl(0, 100%, 74%);
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 6.125rem 1.5rem 4.25rem 1.5rem; /* 98px → 6.125rem, 24px → 1.5rem, 68px → 4.25rem */
+    }
+    
+    .right-section {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .learn-para {
+        font-size: 1.75rem; /* 28px → 1.75rem */
+        margin-bottom: 1.75rem; /* 28px → 1.75rem */
+    }
+    
+    .exp-para {
+        font-size: 1rem; /* 16px → 1rem */
+        margin-bottom: 4.375rem; /* 70px → 4.375rem */
+    }
+    
+    .left-section {
+        padding: 0;
+    }
+    
+    .free-trial {
+        padding: 1.5rem 5rem; /* 24px → 1.5rem, 80px → 5rem */
+        font-size: 0.9375rem; /* 15px → 0.9375rem */
+    }
+    
+    .lower-section {
+        padding: 1.5rem; /* 24px → 1.5rem */
+    }
+    
+    .input-div {
+        margin-bottom: 1rem; /* 16px → 1rem */
+    }
+    
+    .input-data {
+        font-size: 0.75rem; /* 12px → 0.75rem */
+    }
+
+    .input-data::placeholder {
+        font-size: 0.75rem; /* 12px → 0.75rem */
+    }
+
+    .click-but {
+        margin-bottom: 0.875rem; /* 14px → 0.875rem */
+        font-size: 1rem; /* 16px → 1rem */
+    }
+    
+    .agreement {
+        font-size: 0.65625rem; /* 10.5px → 0.65625rem */
+        padding: 0 1.5rem; /* 24px → 1.5rem */
+    }
+
+    .warn-para {
+        margin-top: 0.375rem; /* 6px → 0.375rem */
+    }
+            
+    .warn-icon {
+        right: 1rem; /* 16px → 1rem */
+    }   
+}
